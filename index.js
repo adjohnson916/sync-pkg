@@ -55,7 +55,6 @@ function sync(config, patterns, options) {
     config.authors = authors;
   }
 
-  delete config.version;
   return keys(config, patterns, opts);
 }
 
