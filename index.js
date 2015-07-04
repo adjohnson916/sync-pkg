@@ -36,7 +36,7 @@ function sync(config, patterns, options) {
   }
 
   var opts = options || {};
-  patterns = patterns || ['*'];
+  patterns = (patterns && patterns.length && patterns) || ['*'];
 
   opts.bowerFile = 'bower.json';
   opts.bowerFileExists = fs.existsSync(opts.bowerFile);
